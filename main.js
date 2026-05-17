@@ -1,3 +1,31 @@
+  // typing animation
+   const typedText = document.getElementById('typed-text');
+  const phrases = ['a Web Developer.', 'a Designer.', 'a Problem Solver.'];
+  let phraseIndex = 0;
+  let letterIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+    typedText.textContent = currentPhrase.slice(0, letterIndex);
+
+    if (!isDeleting && letterIndex < currentPhrase.length) {
+      letterIndex++;
+      setTimeout(typeEffect, 120);
+    } else if (isDeleting && letterIndex > 0) {
+      letterIndex--;
+      setTimeout(typeEffect, 60);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(typeEffect, 900);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typedText) setTimeout(typeEffect, 500);
+  });
+
   // Active nav link on scroll
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('nav a');
@@ -11,6 +39,7 @@
       if (a.getAttribute('href') === '#' + current) a.classList.add('active');
     });
   });
+
 
   // === Contact Form Validation ===
 
