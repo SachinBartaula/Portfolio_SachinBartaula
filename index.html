@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachin Bartaula</title>
+    <title>Sachin Bartaula | Web Developer</title>
+    <meta name="description" content="Portfolio of Sachin Bartaula, web developer skilled in HTML, CSS, JavaScript, React and PHP.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="styles.css">
@@ -21,12 +22,15 @@
 </div>
 
 <!-- NAV -->
-<nav>
-  <a href="#home" class="active">Home</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Project</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
+<nav id="nav">
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  <div class="nav-links" id="navLinks">
+    <a href="#home" class="active">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
 
@@ -50,7 +54,7 @@
     <div class="right reveal reveal-delay-2">
       <div class="avatar-wrap">
         <!-- Placeholder avatar — replace src with your actual photo -->
-        <img src="/image/unnamed.jpg" alt="Sachin Bartaula"/>
+        <img src="image/unnamed.jpg" alt="Sachin Bartaula"/>
       </div>
     </div>
   </div>
@@ -116,21 +120,52 @@
         <div class="thumb">🧾📊</div>
         <div class="card-body">
           <h3>Inventory &amp; Billing System</h3>
-          <p>A web-based Inventory and Billing System built using HTML, CSS, JavaScript, and PHP. It helps manage products, track stock, and generate invoices efficiently with a clean and user-friendly interface.</p>
-          <a href="https://github.com/SachinBartaula/Inventory-and-Billing-System" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
+          <p>My BCA 4th semester project: a web-based system with separate admin and employee dashboards to manage inventory, customers, employees and bills, and to view reports.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+          <a href="https://github.com/SachinBartaula/Inventory-and-Billing-System" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
         </div>
       </div>
 
-      <!-- <div class="project-card fade-up-2">
-        <div class="thumb">📊</div>
+      <div class="project-card reveal">
+        <div class="thumb">🛒</div>
         <div class="card-body">
-          <h3>Inventory &amp; Billing System</h3>
-          <p>A web-based Inventory and Billing System built using HTML, CSS, JavaScript, and PHP. It helps manage products, track stock, and generate invoices efficiently with a clean and user-friendly interface.</p>
-          <a href="#" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
+          <h3>E-commerce Website</h3>
+          <p>A PHP online store with user registration and login, product listing and details, cart, checkout, order history, an admin panel, and eSewa payment integration.</p>
+          <div class="tags"><span>PHP</span><span>MySQL</span><span>eSewa</span><span>Apache</span></div>
+          <a href="https://github.com/SachinBartaula/ecommerce" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
         </div>
-      </div>-->
-            
-      </div> 
+      </div>
+
+      <div class="project-card reveal">
+        <div class="thumb">📝</div>
+        <div class="card-body">
+          <h3>TextUtil</h3>
+          <p>A React app built while learning React from scratch, with utilities for working with and transforming text.</p>
+          <div class="tags"><span>React</span><span>JavaScript</span><span>npm</span></div>
+          <a href="https://github.com/SachinBartaula/TextUtil" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="thumb">🔐</div>
+        <div class="card-body">
+          <h3>Password Generator</h3>
+          <p>A password generator web app built with JavaScript and bundled with Vite, with ESLint for code quality.</p>
+          <div class="tags"><span>JavaScript</span><span>Vite</span><span>ESLint</span></div>
+          <a href="https://github.com/SachinBartaula/Password_Generator" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="thumb">💼</div>
+        <div class="card-body">
+          <h3>Personal Portfolio</h3>
+          <p>This responsive portfolio website showcasing my skills, projects and contact details, built with HTML, CSS and JavaScript.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          <a href="https://github.com/SachinBartaula/Portfolio_SachinBartaula" target="_blank" rel="noopener" class="btn-primary"><i class="fab fa-github"></i> Github Link</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -141,13 +176,13 @@
     <div class="left reveal">
       <h2 style="text-align:left;">About <span style="color:var(--accent)">me</span></h2>
       <div class="about-box">
-        <p>I am passionate about web and software development with skills in HTML, CSS, JavaScript, React, PHP, Python, and UI/UX design. I enjoy creating modern, responsive, and user-friendly digital experiences while continuously learning and improving my technical skills in the IT field.</p>
+        <p>I am passionate about web and software development with skills in HTML, CSS, JavaScript, React, PHP, Python, Django and UI/UX design. I enjoy creating modern, responsive, and user-friendly digital experiences while continuously learning and improving my technical skills in the IT field.</p>
         <a href="https://github.com/SachinBartaula" class="btn-primary1"><i class="fab fa-github"></i> Github Link</a>
       </div>
     </div>
     <div class="right reveal reveal-delay-2">
       <div class="about-avatar">
-        <img src="/image/image3.png" alt="About Sachin"/>
+        <img src="image/image3.png" alt="About Sachin"/>
         <div class="tech-badge badge-js" style="font-size:26px;background:#f7df1e;color:#1a1a1a;font-weight:900;">JS</div>
         <div class="tech-badge badge-react" style="background:#0d1117;font-size:56px;color:#61dafb;">⚛</div>
       </div>
@@ -175,7 +210,7 @@
       <button class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:15px;">Submit</button>
     </div>
     <div class="contact-right reveal reveal-delay-2">
-      <img src="/image/image4.png" alt="Contact"/>
+      <img src="image/image4.png" alt="Contact"/>
     </div>
   </div>
 </section>
@@ -194,7 +229,6 @@
   </div>
 </footer>
 
-</body>
 <script src="main.js"></script>
 </body>
 </html>

@@ -233,3 +233,18 @@ initErrorSlots();
 initListeners();
 initCharCounter();
 initSubmit();
+
+// --- Mobile menu toggle ---
+(function () {
+  const nav = document.getElementById('nav');
+  const btn = document.getElementById('navToggle');
+  if (!nav || !btn) return;
+  const setOpen = (open) => {
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
+  };
+  btn.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+  nav.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('click', (e) => { if (!nav.contains(e.target)) setOpen(false); });
+})();
